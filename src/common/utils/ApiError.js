@@ -1,4 +1,4 @@
-class AppError extends Error {
+class ApiError extends Error {
   constructor(message, statusCode, code, details = null) {
     super(message);
 
@@ -9,23 +9,31 @@ class AppError extends Error {
   }
 
   static badRequest(msg = "Bad Request") {
-    return new AppError(msg, 400, "BAD_REQUEST");
+    return new ApiError(msg, 400, "BAD_REQUEST");
   }
 
   static unauthorized(msg = "Unauthorized") {
-    return new AppError(msg, 401, "UNAUTHORIZED");
+    return new ApiError(msg, 401, "UNAUTHORIZED");
+  }
+
+  static forbidden(msg = "forbidden") {
+    return new ApiError(msg, 412, "FORBIDDEN");
   }
 
   static notFound(msg = "Not Found") {
-    return new AppError(msg, 404, "NOT_FOUND");
+    return new ApiError(msg, 404, "NOT_FOUND");
   }
 
   static conflict(msg = "Conflict") {
-    return new AppError(msg, 409, "CONFLICT");
+    return new ApiError(msg, 409, "CONFLICT");
+  }
+
+  static failed(msg = "Fail") {
+    return new ApiError(msg, 400, "FAILED");
   }
 
   static validation(errors) {
-    return new AppError(
+    return new ApiError(
       "Validation failed",
       400,
       "VALIDATION_ERROR",
@@ -33,3 +41,5 @@ class AppError extends Error {
     );
   }
 }
+
+export default ApiError;

@@ -1,1 +1,1 @@
-export * from "../modules/user/user.model.js";
+export * from "../modules/user/user.schema.js";
