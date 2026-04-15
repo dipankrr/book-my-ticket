@@ -24,6 +24,11 @@ import authRoute from "./modules/auth/auth.routes.js"
 app.use("/api/auth", authRoute);
 
 
+
+import seatRoute from "./modules/seat/seat.routes.js"
+
+app.use("/api/seat", seatRoute)
+
 //auth 
 // import authRoute from './module/auth/auth.routes.js'
 // app.use("/api/auth", authRoute);

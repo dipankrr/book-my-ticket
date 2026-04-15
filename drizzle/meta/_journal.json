@@ -15,6 +15,13 @@
       "when": 1776256691899,
       "tag": "0001_thankful_stranger",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1776268354789,
+      "tag": "0002_luxuriant_the_initiative",
+      "breakpoints": true
     }
   ]
 }
